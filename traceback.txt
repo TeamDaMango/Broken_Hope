@@ -1,0 +1,67 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\bootstrap.py", line 284, in bootstrap
+    renpy.main.main()
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\main.py", line 547, in main
+    if renpy.parser.report_parse_errors():
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\parser.py", line 3011, in report_parse_errors
+    renpy.display.error.report_parse_errors(full_text, error_fn)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\display\error.py", line 194, in report_parse_errors
+    renpy.game.invoke_in_new_context(
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\game.py", line 285, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\display\error.py", line 47, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\display\core.py", line 3342, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\display\core.py", line 3825, in interact_core
+    renpy.loader.check_autoreload()
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\loader.py", line 1141, in check_autoreload
+    renpy.exports.reload_script()
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\exports.py", line 1877, in reload_script
+    renpy.game.call_in_new_context("_save_reload_game")
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\game.py", line 345, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\execution.py", line 923, in run_context
+    context.run()
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "/home/tom/ab/nightly-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\ast.py", line 943, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\python.py", line 875, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\loadsave.py", line 376, in save
+    roots = renpy.game.log.freeze(None)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\rollback.py", line 980, in freeze
+    self.complete(False)
+  File "D:\Softwares\renpy\renpy-7.x-nightly\renpy\rollback.py", line 564, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
+
+Windows-10-10.0.22000
+Ren'Py 8.0.0.22030403n
+起始归原:破碎的希望-第一章 Demo
+Wed Mar  9 17:06:26 2022

@@ -1,0 +1,8 @@
+init python:
+
+    endings = []
+    
+    
+
+
+    
