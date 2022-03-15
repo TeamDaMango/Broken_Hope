@@ -1,5 +1,8 @@
 
 define persistent.steam = False
+
+#这里如果想要编辑的话必须修改该场景
+
 define config.developer = False
 #define config.console = False
 
@@ -12,15 +15,22 @@ image blue = "#0000FF"
 image orange = "#FF3000"
 
 image weChatQrCode = ("qrcode/MyWechatQrCode.png")
+image bgmainmenu =  ("menu/bg_Mainmenu.png")
 
 #image sWarning = "bg/splashWarning.png"
 #image sWarning2 = "bg/splashWarning2.png"
 
+# 作者
 define cAlt = Character("作者")
 define cAltN = Character("作者",kind=nvl)
 
+# 主角
 define mcN = DynamicCharacter("player",kind=nvl)
 define mc = DynamicCharacter("player")
+
+# Mango的暗人格
+define mc2N = DynamicCharacter("mangoBad",kind=nvl)
+define mc2 = DynamicCharacter("mangoBad")
 
 
 define mcAltN = DynamicCharacter("mangoAlt",kind=nvl)
@@ -32,7 +42,8 @@ define mcmomN = Character("Mango母亲",kind=nvl)
 define mcmom = Character("Mango母亲")
 define mcbroN = Character("Mango哥哥",kind=nvl)
 define mcbro = Character("Mango哥哥")
-define mcsis = Character("???",kind=nvl)
+define mcsisN = Character("???",kind=nvl)
+define mcsis = Character("???")
 
 define n1 = Character("学生A")
 define n2 = Character("学生B")
@@ -42,6 +53,7 @@ define n5 = Character("学生E")
 define n6 = Character("学生F")
 define n7 = Character("学生G")
 define n8 = Character("学生H")
+define n1a = Character("???")
 define n1N = Character("学生A",kind=nvl)
 define n2N = Character("学生B",kind=nvl)
 define n3N = Character("学生C",kind=nvl)
@@ -50,7 +62,7 @@ define n5N = Character("学生E",kind=nvl)
 define n6N = Character("学生F",kind=nvl)
 define n7N = Character("学生G",kind=nvl)
 define n8N = Character("学生H",kind=nvl)
-
+define n1aN = Character("???",kind=nvl)
 define nall = Character("恶霸同学")
 define nallN = Character("恶霸同学",kind=nvl)
 
@@ -108,6 +120,7 @@ default persistent.player = ""
 default player = persistent.player
 
 default mcName = player
+default mcBad = player + "恶人格"
 default mcNameAlt = "Mango"
 default mangoAlt = "Mango旁白"
 

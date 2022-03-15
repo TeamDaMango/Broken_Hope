@@ -22,23 +22,23 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#ffffff'
 
 ## 当既未选中也未悬停时用于文本按钮的颜色。
-define gui.idle_color = '#888888'
+define gui.idle_color = '#aaaaaa'
 
 ## 小颜色用于小文本，需要更亮/更暗才能达到相同的效果。
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#383838'
 
 ## 用于悬停的按钮和滑条的颜色。
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#4080ff'
 
 ## 用于选中但非焦点的文本按钮的颜色。当一个按钮为当前屏幕或设置选项值时，会处于
 ## 选中状态。
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#6a8aff'
 
 ## 用于无法选择的文本按钮的颜色。
-define gui.insensitive_color = '#8888887f'
+define gui.insensitive_color = '#aaaaaa7f'
 
 ## 用于未填充的滑条部分的颜色。这些颜色不直接使用，但在重新生成条形图像文件时使
 ## 用。
@@ -83,7 +83,7 @@ define gui.title_text_size = 50
 ## 标题和游戏菜单 #####################################################################
 
 ## 用于标题菜单和游戏菜单的图像。
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = "bgmainmenu"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -195,9 +195,9 @@ define gui.choice_button_borders = Borders(100, 5, 100, 5)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cccccc"
-define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = "#444444"
+define gui.choice_button_text_idle_color = "#4080ff"
+define gui.choice_button_text_hover_color = "#7090ff"
+define gui.choice_button_text_insensitive_color = "#799df7"
 
 
 ## 存档按钮 ########################################################################
@@ -314,10 +314,10 @@ define gui.unscrollable = "hide"
 ## 历史记录屏幕显示玩家已经阅读过的对话。
 
 ## Ren'Py 将保留的对话历史块数。
-define config.history_length = 250
+define config.history_length = 700
 
 ## 历史屏幕条目的高度，或设置为“None”以使高度变量自适应。
-define gui.history_height = 140
+define gui.history_height = None
 
 ## 所指定叙述角色的标签的坐标、宽度和对齐方式。
 define gui.history_name_xpos = 155

@@ -22,3 +22,5 @@ init python:
             achievement.grant("第一次游玩")
         if renpy.has_label("story1_1") or renpy.has_label("story1_1Alt"):
             achievement.grant("完成第一章第一幕")
+        if renpy.has_label("story1_2") or renpy.has_label("story1_2Alt"):
+            achievement.grant("完成第一章第二幕")    

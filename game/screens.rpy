@@ -4,14 +4,20 @@
 
 init offset = -1
 
+################################################################################
+# 描边文字
+################################################################################
+
 
 ################################################################################
 ## 样式
 ################################################################################
 
 style default:
-    properties gui.text_properties()
-    language gui.language
+    font gui.text_font
+    size gui.text_size
+    color gui.text_color
+    outlines [(2, "#000000", 0, 0)]
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -146,9 +152,11 @@ style namebox:
     padding gui.namebox_borders.padding
 
 style say_label:
+    color gui.accent_color
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
+    outlines [(4, "#53a1ff", 0, 0),(2, "#53a1ff", 0, 0)]
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
@@ -319,10 +327,14 @@ screen navigation():
             ## “帮助”对移动设备来说并非必需或相关。
             textbutton _("帮助") action ShowMenu("help")
 
-        textbutton _("支持作品(微信支付)") action Start("qrcode")
+        if gameDemo == True:
+            textbutton _("支持作品(微信支付)") action Start("qrcode")
 
-        textbutton _("支持作品(爱发电)") action OpenURL("https://afdian.net/@MangoGame")
+            textbutton _("支持作品(爱发电)") action OpenURL("https://afdian.net/@MangoGame")
+        else:    
+            textbutton _("-Demo版本暂不开放-") action NullAction()
 
+            textbutton _("-Demo版本暂不开放-") action NullAction()
         if renpy.variant("pc"):
 
             ## “退出”按钮在 iOS 上被禁止设置，在安卓和网页上也不是必需的。
@@ -338,7 +350,10 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-
+    color "#fff"
+    outlines [(4, "#53a1ff", 0, 0),(2, "#53a1ff", 0, 0)]
+    hover_outlines [(4, "#a0d3ff", 0,0),(2, "#a0d3ff", 2,2)]
+    insensitive_outlines [(4, "#8ac6fa", 0,0),(2, "#8ac6fa", 2,2)]
 
 ## 标题菜单界面 ######################################################################
 ##
@@ -519,8 +534,11 @@ style game_menu_label:
 
 style game_menu_label_text:
     size gui.title_text_size
-    color gui.accent_color
+    color "#fff"
+    outlines [(4, "#53a1ff", 0, 0),(2, "#53a1ff", 0, 0)]
     yalign 0.5
+    
+
 
 style return_button:
     xpos gui.navigation_xpos
@@ -818,7 +836,10 @@ style pref_label:
     bottom_margin 2
 
 style pref_label_text:
+    color "#fff"
+    outlines [(4, "#53a1ff", 0, 0),(2, "#53a1ff", 0, 0)]
     yalign 1.0
+    
 
 style pref_vbox:
     xsize 225
