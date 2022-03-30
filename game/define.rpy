@@ -14,8 +14,25 @@ image green = "#00FF00"
 image blue = "#0000FF"
 image orange = "#FF3000"
 
-image weChatQrCode = ("qrcode/MyWechatQrCode.png")
-image bgmainmenu =  ("menu/bg_Mainmenu.png")
+image weChatQrCode = "qrcode/MyWechatQrCode.png"
+image bgmainmenu =  "menu/bg_Mainmenu.png"
+
+# 故事
+# 第一章
+image bg_story1 = "#000000"
+image story1 = "storyname/story1.png"
+# 第二章
+image bg_story2 = "#000000"
+image story2 = "storyname/story2.png"
+# 第三章
+image bg_story3 = "#000000"
+image story3 = "storyname/story3.png"
+# 第四章
+image bg_story4 = "#000000"
+# 第五章
+image bg_story5 = "#000000"
+# 第六章
+image bg_storyFinal = "StoryBG/storyFinaled.png"
 
 #image sWarning = "bg/splashWarning.png"
 #image sWarning2 = "bg/splashWarning2.png"
@@ -119,6 +136,7 @@ define a3N = Character("???",kind=nvl)
 default persistent.player = ""
 default player = persistent.player
 
+default mcmem1 = player + "(回忆)"
 default mcName = player
 default mcBad = player + "恶人格"
 default mcNameAlt = "Mango"
@@ -127,6 +145,9 @@ default mangoAlt = "Mango旁白"
 #记录第几章节
 default persistent.chapter = 0
 default chapter = persistent.chapter
+
+default persistent.chapterName = ""
+default play_state = "可玩"
 
 #记录第几部分
 default persistent.chpart = 0
@@ -140,3 +161,9 @@ default persistent.wrongChoice = 0
 # default persistent.gameover = 0
 # 记录获得结局数
 default persistent.endingCount = 0
+
+
+# 介于可能会有人模仿说脏话的原因
+# 特地追加该功能
+# True:屏蔽敏感内容,False:可见敏感内容
+default persistent.sensitiveContent = False

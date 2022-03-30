@@ -300,7 +300,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("开始游戏") action Start()
+            textbutton _("开始游戏") action ShowMenu("story_menu")
 
         else:
 
